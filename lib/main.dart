@@ -148,25 +148,29 @@ class MainApp extends StatelessWidget {
           )),
         ),
         floatingActionButton: Align(
-          alignment: Alignment.bottomLeft,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 30.0),
-            child: FloatingActionButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => TambahView()), // Halaman tujuan
-                );
-              },
-              backgroundColor: Colors.white,
-              child: const Icon(
-                Icons.add,
-                color: Color(0XFF144795),
-              ), // Icon plus
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30.0),
+              child: Builder(
+                builder: (context) => FloatingActionButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TambahView(),
+                      ),
+                    );
+                  },
+                  backgroundColor: Colors.white,
+                  child: const Icon(
+                    Icons.add,
+                    color: Color(0XFF144795),
+                  ),
+                ),
+              ),
             ),
-          ),
-        )
+          )
+
       ),
     );
   }
